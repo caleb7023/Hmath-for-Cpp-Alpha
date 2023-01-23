@@ -11,7 +11,7 @@ int main(void){
     for(unsigned short i = 0; i < 32; i++){
         a[i] = 2 / ((double)(i) * 2 + 1);
     }
-    double val_b = ln(10);
+    double val_b = ln(-1);
     val_a = sinc(rcomplex(4, -7));
     return 0;
 }
