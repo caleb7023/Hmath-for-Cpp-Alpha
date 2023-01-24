@@ -70,6 +70,13 @@ class complex{
               return ans;
           };
 
+          complex operator-(double value){
+              complex ans;
+              ans(this->double_real_part - value,
+                  this->double_imag_part);
+              return ans;
+          };
+
           complex operator-(void){
               complex ans;
               ans(-this->double_real_part, -this->double_imag_part);

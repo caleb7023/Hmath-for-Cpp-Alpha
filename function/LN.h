@@ -1,38 +1,23 @@
 #ifndef LN
 #define LN
 
-#include "EZ_POW.h"
-
-inline const double odd_reciprocal_list_for_ln[32] = {
-    0.030769230769230769,    0.031746031746031744,
-    0.032786885245901641,    0.033898305084745763,
-    0.035087719298245612,    0.036363636363636362,
-    0.037735849056603772,    0.039215686274509803,
-    0.040816326530612242,    0.042553191489361701,
-    0.044444444444444444,    0.046511627906976744,
-    0.048780487804878048,    0.051282051282051282,
-    0.054054054054054057,    0.057142857142857141,
-    0.060606060606060606,    0.064516129032258063,
-    0.068965517241379309,    0.074074074074074074,
-    0.080000000000000000,    0.086956521739130432,
-    0.095238095238095233,    0.105263157894736842,
-    0.117647058823529412,    0.133333333333333333,
-    0.153846153846153846,    0.181818181818181818,
-    0.222222222222222222,    0.285714285714285714,
-    0.400000000000000000,    0.666666666666666667
-};
+#include "EZ_LN.h"
 
 double ln(double exponent){
-    double ans = 0;
-    double x = (exponent - 1) / (exponent + 1); 
-    double y = ez_pow(x, 2);
-    for(unsigned short int i; i < 32; i++){
-        ans += odd_reciprocal_list_for_ln[i];
-        ans *= y;
+    if(0 <= exponent){
+        return ez_ln(exponent);
+    }else{
+        std::cout << "Hmath_complex_error:\n\nYou can not use negativ number for this functhion.\nTry using lncd()." << std::endl;
+        exit(1);
     }
-    ans += 2;
-    ans *= x;
-    return ans;
+}
+
+complex lnc(complex exponent){
+    if(0 <= exponent.real()){
+        return ez_lnc(exponent);
+    }else{
+        return ez_lnc(exponent);
+    }
 }
 
 #endif
