@@ -1,6 +1,8 @@
 #ifndef CEIL
 #define CEIL
 
+#include "../type/COMPLEX.hpp"
+
 double ceil(double value_a){
     return 0 < value_a ? (long)(value_a + 1) : ((double)(long)(value_a) == value_a ? value_a : (long)(value_a));
 }

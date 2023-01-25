@@ -1,8 +1,6 @@
 #ifndef COMPLEX
 #define COMPLEX
 
-#include <iostream>
-
 /* 
    Hmath's type "compex" 
 */
@@ -134,16 +132,12 @@ class complex{
 
         // Bad symbol
         // comparing_error
-        void operator< (complex value){comparing_error();};
-        void operator> (complex value){comparing_error();};
-        void operator<=(complex value){comparing_error();};
-        void operator>=(complex value){comparing_error();};
- 
-        void comparing_error(){
-            std::cout << "Hmath_comparing_error:\n\nComparing complex numbers is mathematically impossible.\nIf you want to compare between real numbers and imaginary parts, please try the below.\n\nexample:\n\n(complex_a < complex_b)\n ||||||||||||||||||||| \n VVVVVVVVVVVVVVVVVVVVV \n(complex_a.real() < complex_b.real()) && (complex_a.imag() < complex_b.imag())\n\nBad symbol:\n\n <  |  >  |  <=  |  >=\n\nexited.\n" << std::endl;
-            exit(1);
-        }
-    
+
+        // operator< (complex);
+        // operator> (complex);
+        // operator<=(complex);
+        // operator>=(complex);
+
 };
 
 complex rcomplex(double real, double imag){

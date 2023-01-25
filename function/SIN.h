@@ -2,6 +2,7 @@
 #define SIN
 
 #include "EZ_POW.h"
+#include "../type/COMPLEX.hpp"
 
 /*
  * $ \sin(\theta) = \sum_{n = 0}^{\infty}\frac{(-1)^n}{(2n+1)!}\theta^{2n+1} $

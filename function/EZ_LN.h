@@ -1,6 +1,7 @@
 #ifndef EZ_LN
 #define EZ_LN
 
+#include "../type/COMPLEX.hpp"
 #include "EZ_POW.h"
 
 inline const double odd_reciprocal_list_for_ln[64] = {

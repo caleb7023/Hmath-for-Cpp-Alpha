@@ -1,6 +1,8 @@
 #ifndef EZ_POW
 #define EZ_POW
 
+#include "../type/COMPLEX.hpp"
+
 inline double ez_pow(double base, double exponent){
     double ans = 1;
     for(short i = 0; i < exponent; i++){

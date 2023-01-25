@@ -2,19 +2,16 @@
 #define LN
 
 #include "EZ_LN.h"
+#include "../type/COMPLEX.hpp"
 
 double ln(double exponent){
-    if(0 <= exponent){
-        return ez_ln(exponent);
-    }else{
-        std::cout << "Hmath_complex_error:\n\nYou can not use negativ number for this functhion.\nTry using lncd()." << std::endl;
-        exit(1);
-    }
+    return ez_ln(exponent);
 }
 
 complex lnc(complex exponent){
-    if(0 <= exponent.real()){
-        return ez_lnc(exponent);
+    complex exponent_d = exponent;
+    if(0 <= exponent_d.real()){
+        return ez_lnc(exponent_d);
     }else{
         return ez_lnc(exponent);
     }
